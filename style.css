@@ -16,6 +16,11 @@ body {
   align-items: center;
 }
 
+.main-container .image img{
+  background-color: hsl(180, 29%, 50%);
+  width: 100%;
+}
+
 #job-list {
   margin-top: 20px;
   max-width: 1200px;
