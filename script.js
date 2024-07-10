@@ -162,6 +162,10 @@ document.addEventListener('DOMContentLoaded', function() {
           const jobCard = document.createElement('div');
           jobCard.classList.add('job-card');
 
+          if (job.featured) {
+            jobCard.classList.add('featured');
+          }
+
           jobCard.innerHTML = `
             <div class="job-card-header">
               <img src="${job.logo}" alt="${job.company} Logo" class="company-logo">
