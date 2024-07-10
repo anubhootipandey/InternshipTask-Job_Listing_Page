@@ -72,7 +72,7 @@ body {
   margin-bottom: 5px;
 }
 
-.tag {
+.tag, .tablet {
   background-color: #E0F2F1;
   color: hsl(180, 29%, 50%);
   border-radius: 5px;
@@ -80,6 +80,11 @@ body {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.tablet:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
 }
 
 .tag.company-name {
@@ -104,7 +109,7 @@ body {
   font-size: 14px;
 }
 
-.job-tags {
+.job-tablets {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -147,7 +152,7 @@ body {
     flex-direction: column;
   }
 
-  .job-tags {
+  .job-tablets {
     justify-content: flex-start;
   }
 }

@@ -179,19 +179,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>${job.postedAt} · ${job.contract} · ${job.location}</p>
               </div>
             </div>
-            <div class="job-tags">
-              <span class="tag">${job.role}</span>
-              <span class="tag">${job.level}</span>
-              ${job.languages.map(language => `<span class="tag">${language}</span>`).join('')}
-              ${job.tools.map(tool => `<span class="tag">${tool}</span>`).join('')}
+            <div class="job-tablets">
+              <span class="tablet">${job.role}</span>
+              <span class="tablet">${job.level}</span>
+              ${job.languages.map(language => `<span class="tablet">${language}</span>`).join('')}
+              ${job.tools.map(tool => `<span class="tablet">${tool}</span>`).join('')}
             </div>
           `;
 
           jobList.appendChild(jobCard);
 
-          jobCard.querySelectorAll('.tag').forEach(tag => {
-            tag.addEventListener('click', () => {
-              addFilter(tag.textContent);
+          jobCard.querySelectorAll('.tablet').forEach(tablet => {
+            tablet.addEventListener('click', () => {
+              addFilter(tablet.textContent);
             });
           });
         });
@@ -227,13 +227,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         const filteredJobs = jobData.filter(job => {
-          const jobTags = [
+          const jobTablets = [
             job.role,
             job.level,
             ...job.languages,
             ...job.tools
           ];
-          return selectedFilters.every(filter => jobTags.includes(filter));
+          return selectedFilters.every(filter => jobTablets.includes(filter));
         });
 
         renderJobs(filteredJobs);
