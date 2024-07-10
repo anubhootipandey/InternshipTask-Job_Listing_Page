@@ -123,6 +123,7 @@ body {
   align-items: center;
   gap: 10px;
   margin-bottom: 70px;
+  flex-wrap: wrap;
   background-color: #fff;
   padding: 20px;
 }
